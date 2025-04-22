@@ -6,9 +6,9 @@ A toolkit for crawling, indexing, and semantically searching Bitcoin-related sou
 
 ## 🚀 Project Highlights
 
-- **Bitcoin Code Mining**: Crawl GitHub for Bitcoin-related `.py` and `.js` files, enabling code search, analysis, and downstream LLM-based code understanding.
-- **Graph-RAG for Code**: Build a knowledge graph from code entities and relationships. Enable graph-constrained retrieval and reasoning for LLMs.
-- **Semantic Search**: Store code/document embeddings in Milvus for fast, scalable semantic search.
+- **Bitcoin Code Mining**: Crawl different bitcoin related sites for data
+- **Graph-RAG for Code**: Build a knowledge graph from data entities and relationships. Enable graph-constrained retrieval and reasoning for LLMs.
+- **Semantic Search**: Store document embeddings in Milvus for fast, scalable semantic search.
 - **End-to-End Pipeline**: From web crawling to entity extraction, graph construction, embedding, and RAG querying—all in one place.
 
 ---
@@ -18,35 +18,25 @@ A toolkit for crawling, indexing, and semantically searching Bitcoin-related sou
 ### How It Works
 
 1. **Anonymous Crawling**
-    - Crawl GitHub search results for “bitcoin” in `.py` and `.js` files (no API key required).
-    - Download raw code files into a local directory structure.
+    - Crawl different sublinks inside the single link for indepth scraping
 
-2. **Storage & Organization**
-    - Files are organized by language, repo, and file path.
-    - Easily extensible to crawl other platforms (GitLab, Bitbucket).
 
-3. **Indexing & Embedding**
-    - Extract code chunks (functions, classes).
-    - Generate embeddings (e.g., OpenAI, CodeBERT).
-    - Store in Milvus for semantic code search.
-
-4. **RAG for Code**
-    - Build a code knowledge graph (e.g., function call graphs, dependency graphs).
+3. **RAG**
+    - Build a knowledge graph on entities using gpt 4o mini
     - Enable graph-constrained code search and LLM-based code Q&A.
 
 ### Example Use Cases
 
-- “Find all Python Bitcoin wallet implementations using ECDSA.”
-- “Summarize how transaction signing is handled in JavaScript Bitcoin libraries.”
-- “Trace dependencies between Bitcoin smart contract modules.”
+- “how do you incentivize miners?"
+- “What is the fee threshold for inclusion?.”
 
 ---
 
-## 2. Graph-RAG Pipeline (for Code)
+## 2. Graph-RAG Pipeline 
 
 ### What is Graph-RAG?
 
-Graph-RAG (Graph-augmented Retrieval-Augmented Generation) combines vector search (semantic similarity) with explicit knowledge graphs for code. This enables:
+Graph-RAG (Graph-augmented Retrieval-Augmented Generation) combines vector search (semantic similarity) with explicit knowledge graphs. This enables:
 
 - More accurate, context-rich retrieval for LLMs
 - Graph-based constraints (e.g., “find functions that interact with both A and B”)
@@ -78,16 +68,12 @@ Graph-RAG (Graph-augmented Retrieval-Augmented Generation) combines vector searc
 
 ## 3. How to Run
 
-### Environment Setup
-
-```bash
-pip install -r requirements.txt
-```
 
 ### Run the Bitcoin Code Crawler
 
 ```bash
-python bitcoin_crawler.py --pages 5 --output ./downloads
+
+jupyter run DataExtraction.ipynb
 ```
 
 ### Start Milvus (Vector DB)
@@ -111,23 +97,15 @@ entity_description_embeddings = store_entity_semantic_embeddings(
 )
 ```
 
-### Launch the Graph-RAG Notebook
+### Launch the Graph-RAG Notebook (After Data extraction)
 
 ```bash
-jupyter lab mi/MiAILaw/src/Graph_Rag.ipynb
+jupyter run Graph_Rag.ipynb
 ```
 
 ---
 
-## 4. Customization & Extensibility
-
-- **Change code crawling keywords or platforms**: Edit `bitcoin_crawler.py`.
-- **Switch embedding models**: Swap out LLM or code embedding models as needed.
-- **Extend graph logic**: Add new entity/relationship types for richer graphs.
-
----
-
-## 5. Dependencies
+## 4. Dependencies
 
 - `aiohttp`, `bs4`, `pypdf` for crawling/parsing
 - `langchain`, `openai`, `networkx` for LLMs and graphs
@@ -135,8 +113,3 @@ jupyter lab mi/MiAILaw/src/Graph_Rag.ipynb
 
 ---
 
-## 6. License
-
-MIT License
-
----
