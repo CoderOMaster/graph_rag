@@ -113,6 +113,7 @@ jupyter run Graph_Rag.ipynb
 ## 5. Links to be scraped (Potential Ones)
 
    **General RAG resources:**
+   
     - https://bitcoinops.org/
     - https://gnusha.org/
     - https://bitcointalk.org/
