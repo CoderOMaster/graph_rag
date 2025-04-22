@@ -1,13 +1,13 @@
-# Bitcoin Graph-RAG & Code Intelligence
+# Bitcoin Graph-RAG
 
-A toolkit for crawling, indexing, and semantically searching Bitcoin-related source code using a Graph-augmented Retrieval-Augmented Generation (Graph-RAG) pipeline.
+A toolkit for crawling, indexing, and semantically searching Bitcoin-related tasks using a Graph-augmented Retrieval-Augmented Generation (Graph-RAG) pipeline.
 
 ---
 
 ## 🚀 Project Highlights
 
 - **Bitcoin Code Mining**: Crawl different bitcoin related sites for data
-- **Graph-RAG for Code**: Build a knowledge graph from data entities and relationships. Enable graph-constrained retrieval and reasoning for LLMs.
+- **Graph-RAG**: Build a knowledge graph from data entities and relationships. Enable graph-constrained retrieval and reasoning for LLMs.
 - **Semantic Search**: Store document embeddings in Milvus for fast, scalable semantic search.
 - **End-to-End Pipeline**: From web crawling to entity extraction, graph construction, embedding, and RAG querying—all in one place.
 
@@ -20,10 +20,8 @@ A toolkit for crawling, indexing, and semantically searching Bitcoin-related sou
 1. **Anonymous Crawling**
     - Crawl different sublinks inside the single link for indepth scraping
 
-
-3. **RAG**
+2. **RAG**
     - Build a knowledge graph on entities using gpt 4o mini
-    - Enable graph-constrained code search and LLM-based code Q&A.
 
 ### Example Use Cases
 
