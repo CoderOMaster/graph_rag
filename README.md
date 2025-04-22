@@ -13,7 +13,7 @@ A toolkit for crawling, indexing, and semantically searching Bitcoin-related tas
 
 ---
 
-## 1. Bitcoin Code Crawling & Analysis
+## 1. Bitcoin Data Crawling & Analysis
 
 ### How It Works
 
@@ -43,23 +43,22 @@ Graph-RAG (Graph-augmented Retrieval-Augmented Generation) combines vector searc
 ### Pipeline Overview
 
 1. **Crawling & Extraction**
-    - Use `bitcoin_crawler.py` to fetch code from GitHub.
-    - Store each file with metadata.
+    - Use `DataExtraction.ipynb` to fetch data.
+    - Store each file in txt files.
 
 2. **Chunking & Embedding**
-    - Split code into logical units (functions, classes).
     - Generate semantic embeddings and store in Milvus.
 
 3. **Entity & Relationship Extraction**
-    - Extract code entities (functions, classes, modules).
-    - Identify relationships (e.g., function calls, imports).
+    - Extract entities 
+    - Identify relationships 
 
 4. **Graph Construction**
-    - Build a knowledge graph: nodes = code entities, edges = relationships.
+    - Build a knowledge graph: nodes = data entities, edges = relationships.
 
 5. **Graph-RAG Querying**
     - Use the graph to filter relevant code contexts.
-    - Retrieve supporting code chunks via vector search.
+    - Retrieve supporting chunks via vector search.
     - Feed both graph context and retrieved code to the LLM for generation.
 
 ---
