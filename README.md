@@ -112,13 +112,13 @@ jupyter run Graph_Rag.ipynb
 
 ## 5. Links to be scraped (Potential Ones)
 
-General RAG resources:
-https://bitcoinops.org/
-https://gnusha.org/
-https://bitcointalk.org/
-https://gnusha.org/url/
-https://btctranscripts.com/categories
-https://arxiv.org/search/?query=bitcoin&searchtype=all&source=header
-https://iacr.org/search/?q=bitcoin
-https://delvingbitcoin.org/
-https://scalingbitcoin.org/transcripts
+   **General RAG resources:**
+    - https://bitcoinops.org/
+    - https://gnusha.org/
+    - https://bitcointalk.org/
+    - https://gnusha.org/url/
+    - https://btctranscripts.com/categories
+    - https://arxiv.org/search/?query=bitcoin&searchtype=all&source=header
+    - https://iacr.org/search/?q=bitcoin
+    - https://delvingbitcoin.org/
+    - https://scalingbitcoin.org/transcripts
